@@ -1,2 +1,70 @@
-h1
-	color green
+@import "normalize.styl"
+gris_oscuro = #333333
+gris_claro = #818181
+a
+	text-decoration none
+body
+	font-family 'Varela Round', 'sans-serif'
+	font-size 16px
+figure
+	margin 0
+//buttons
+.button-menu
+	//pone a volar el elemento para no insertarlo en algun contenedor
+	//para cualquier position se le puede poner left right bottom top
+	//margin-top es la mitad de lo que mide nuestra fuente para que se centre bien el texto
+	left .5em
+	margin-top -10px
+	position absolute
+	top 50%
+
+//oocss classes
+.relative
+	position relative
+.container
+	padding 1.4rem
+	font-size 0
+	text-align center
+.border-bottom
+	border-bottom 1px solid
+.name
+	color gris_oscuro
+.menu
+	display none
+.autor
+	color gris_claro
+.header
+	height 3.5em
+	// a
+	// 	display none
+	.title
+		font-size 1.1em
+		line-height 3.5em
+		margin 0
+		text-align center
+.song
+	//width 8em
+	//el width de arriba ya no sirve debido a que ese se toma en referencia al tamaño de la letra
+	//del contenedor padre es decir container y como es 0 no se ve entonces utilizamos rem
+	//esto es posible ya que usamos un display inline-block que tiene propiedades de texto
+	//1 rem vale 16 pix
+	display inline-block
+	font-size 1rem
+	margin-right 1em
+	margin-bottom 1em
+	text-align left
+	width 8rem
+	&:nth-child(even)
+		margin-right 0
+	p
+		margin .5em 0
+		//margin/padding cuando recibe 4 parametros top right bottom left
+		//margin/padding cuando recibe 2 parametros top/bottom right/left
+
+//se crea una pseudo clase, nth-child nos busca a los hijos que nosotros pongamos dentro de los
+//parametros que se ponen dentro, se pueden mandar varios parametros
+//even busca a los hijos pares de la clase song
+	
+
+
+
